@@ -1,5 +1,3 @@
-PRAGMA foreign_keys = ON;
-
 -- Patients
 INSERT INTO Patients (first_name, last_name, dob, gender, phone, address) VALUES
 ('Amit', 'Shah', '1990-02-15', 'M', '9876500001', 'Delhi'),
