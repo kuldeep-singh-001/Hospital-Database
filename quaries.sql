@@ -1,7 +1,5 @@
--- queries.sql (Hospital Management – SELECT Practice)
-
 -- =========================================================
--- 1. SELECT *
+-- 1. SELECT 
 -- =========================================================
 -- All patients
 SELECT * FROM Patients;
@@ -11,7 +9,6 @@ SELECT * FROM Doctors;
 
 -- All appointments
 SELECT * FROM Appointments;
-
 
 -- =========================================================
 -- 2. SELECT specific columns
@@ -25,7 +22,6 @@ SELECT first_name, last_name, specialty FROM Doctors;
 -- Appointment date and status only
 SELECT appointment_date, status FROM Appointments;
 
-
 -- =========================================================
 -- 3. WHERE (filtering)
 -- =========================================================
@@ -37,8 +33,6 @@ SELECT * FROM Doctors WHERE specialty = 'Cardiologist';
 
 -- Appointments marked as 'Scheduled'
 SELECT * FROM Appointments WHERE status = 'Scheduled';
-
-
 
 -- =========================================================
 -- 4. AND / OR
@@ -55,8 +49,6 @@ WHERE specialty = 'Cardiologist' OR specialty = 'Neurologist';
 SELECT * FROM Patients
 WHERE address LIKE '%Delhi%' OR dob > '1990-01-01';
 
-
-
 -- =========================================================
 -- 5. LIKE
 -- =========================================================
@@ -68,8 +60,6 @@ SELECT * FROM Doctors WHERE last_name LIKE '%i';
 
 -- Patients whose address contains 'bad'
 SELECT * FROM Patients WHERE address LIKE '%bad%';
-
-
 
 -- =========================================================
 -- 6. BETWEEN
@@ -86,8 +76,6 @@ WHERE appointment_date BETWEEN '2025-09-01' AND '2025-09-10';
 SELECT * FROM Doctors
 WHERE phone BETWEEN '9876501002' AND '9876501004';
 
-
-
 -- =========================================================
 -- 7. ORDER BY
 -- =========================================================
@@ -100,12 +88,9 @@ SELECT * FROM Doctors ORDER BY specialty DESC;
 -- Appointments ordered by date (earliest first)
 SELECT * FROM Appointments ORDER BY appointment_date ASC;
 
-
-
 -- =========================================================
 -- 8. LIMIT (with OFFSET)
 -- =========================================================
-
 -- First 3 patients
 SELECT * FROM Patients LIMIT 3;
 
@@ -116,4 +101,3 @@ SELECT * FROM Patients LIMIT 2 OFFSET 2;
 SELECT * FROM Appointments
 ORDER BY appointment_date DESC
 LIMIT 2;
-
